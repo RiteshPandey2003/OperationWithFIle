@@ -23,16 +23,16 @@ public class FileController {
         return "checking";
     }
 
-    @PostMapping("/upload")
-    public ResponseEntity<FileTable> uploadFile(@RequestParam("file") MultipartFile file,
-                                                @RequestParam("updateId") Long updateId) {
-        try {
-            FileDto fileDto = new FileDto(file, updateId);
-            FileTable savedFile = fileService.uploadFile(fileDto); // call instance method
-            return ResponseEntity.ok(savedFile);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(500).build();
-        }
-    }
+//    @PostMapping("/upload")
+//    public ResponseEntity<FileTable> uploadFile(@RequestParam("file") MultipartFile file,
+//                                                @RequestParam("updateId") Long updateId) {
+//        try {
+//            FileDto fileDto = new FileDto(file, updateId);
+//            FileTable savedFile = fileService.uploadFile(fileDto); // call instance method
+//            return ResponseEntity.ok(savedFile);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return ResponseEntity.status(500).build();
+//        }
+//    }
 }
